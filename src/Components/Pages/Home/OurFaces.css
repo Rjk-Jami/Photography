@@ -1,0 +1,37 @@
+/* Custom Pagination Styles for Modern Look */
+
+.swiper-pagination-custom {
+    /* Ensures pagination is absolutely positioned correctly */
+    position: absolute;
+    bottom: 20px !important; /* Adjust if needed */
+    width: 100%;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet {
+    /* Default dot appearance */
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    opacity: 1;
+    transition: all 0.3s ease;
+    border-radius: 5px; /* Slight oval/pill shape for modern look */
+    margin: 0 4px; /* Spacing between dots */
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+    /* Active dot appearance (the currently visible slide) */
+    width: 25px; /* Stretches the active dot */
+    background: #3b82f6; /* Blue color (blue-600 equivalent) */
+    opacity: 1;
+}
+
+/* Optional: Make the dots slightly larger on mobile */
+@media (max-width: 640px) {
+    .swiper-pagination-custom .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+    }
+    .swiper-pagination-custom .swiper-pagination-bullet-active {
+        width: 30px;
+    }
+}

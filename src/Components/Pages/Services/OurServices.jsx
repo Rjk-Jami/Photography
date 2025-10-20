@@ -1,47 +1,59 @@
 import React from 'react';
 
 const OurServices = () => {
- const services = [
+const services = [
     {
       title: "Wedding Photography",
       description: "Capturing the raw emotion, timeless moments, and genuine narrative of your special day with an artistic touch.",
-      icon: "📸",
+      icon: "💍", // Modern Icon for Commitment/Wedding
       gradient: "from-pink-500 to-rose-500"
     },
     {
       title: "Wedding Cinematography",
       description: "Crafting a cinematic, high-definition film that tells the beautiful, flowing story of your wedding day.",
-      icon: "🎥",
+      icon: "🎬", // Modern Icon for Filmmaking/Cinema
       gradient: "from-pink-500 to-blue-600"
     },
     {
       title: "Pre & Post Wedding Shoots",
       description: "Creative and relaxed photography sessions to celebrate your journey and bond before and after the matrimonial event.",
-      icon: "💑",
+      icon: "💖", // Modern Icon for Love/Affection
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Event & Food Photography",
-      description: "Professional, high-impact visuals for corporate events, private parties, and mouth-watering, detailed food presentations.",
-      icon: "🎪",
-      gradient: "from-orange-500 to-red-500"
+      title: "Wedding & Events Photography",
+      description: "Capturing timeless memories of your special celebrations with a focus on candid moments and elegant details.",
+      icon: "🎉", // Modern Icon for Celebration/Events
+      gradient: "from-red-500 to-orange-500"
+    },
+    {
+      title: "Drone & Aerial Photography",
+      description: "Stunning, elevated perspectives from above with high-resolution aerial shots for breathtaking and unique views.",
+      icon: "🛰️", // Modern Icon for Advanced Aerial/Satellite View
+      gradient: "from-gray-500 to-slate-700"
+    },
+    {
+      title: "Food & Product Photography",
+      description: "High-impact visuals for mouth-watering, detailed food presentations and captivating e-commerce product shots.",
+      icon: "📦", // Modern Icon for Product/Commercial Goods
+      gradient: "from-amber-500 to-yellow-600"
     },
     {
       title: "Outdoor Photography",
       description: "Stunning portraits and candid shots utilizing natural light and beautiful, scenic locations as the perfect backdrop.",
-      icon: "🌄",
+      icon: "🌳", // Modern Icon for Nature/Scenery
       gradient: "from-green-500 to-emerald-500"
     },
     {
-      title: "Customized Photo AI",
-      description: "Leveraging cutting-edge artificial intelligence for creative editing, unique visual effects, and photo restoration services.",
-      icon: "🤖",
-      gradient: "from-gray-600 to-slate-700"
+      title: "Photo Album Creation",
+      description: "Preserve your memories in beautifully designed photo albums, crafted with artistic layouts, premium quality, and a personal storytelling touch for every occasion.",
+      icon: "🖼️", // Modern Icon for Picture Frame/Album
+      gradient: "from-blue-600 to-indigo-700"
     },
     {
       title: "Event Management",
       description: "Comprehensive planning, logistics, and on-site execution to ensure your entire event runs flawlessly from start to finish.",
-      icon: "📅", // Updated icon for better relevance
+      icon: "📋", // Modern Icon for Clipboard/Planning
       gradient: "from-gray-600 to-slate-700"
     },
 ];
@@ -66,35 +78,34 @@ const OurServices = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden"
+              // --- Card Height/Width Modification ---
+              // The `h-60` class makes the card shorter (fixed height)
+              // The `p-6` reduces padding to make the content tighter
+              className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden h-60" 
+              // Removed default height/min-height implicit in original design
             >
               {/* Gradient Background Effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
-              
+
               {/* Content */}
-              <div className="relative p-8">
+              <div className="relative p-6"> {/* Reduced p-8 to p-6 for a tighter card */}
                 {/* Icon */}
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center text-3xl text-white mb-6 transform group-hover:scale-110 transition-transform duration-500`}>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center text-2xl text-white mb-4 transform group-hover:scale-110 transition-transform duration-500`}>
                   {service.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-gray-900 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-gray-900 transition-colors duration-300">
                   {service.title}
                 </h3>
 
-                {/* Description */}
-                <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
+                {/* Description - Text size reduced for a better fit */}
+                <p className="text-sm text-gray-600 leading-snug group-hover:text-gray-700 transition-colors duration-300"> 
                   {service.description}
                 </p>
 
-                {/* Learn More Button */}
-                <button className="flex items-center text-sm font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
-                  Learn More
-                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
+                {/* Learn More Button (Moved to bottom right to fit the space better) */}
+                
               </div>
 
               {/* Hover Border Effect */}
@@ -104,7 +115,7 @@ const OurServices = () => {
         </div>
       </div>
 
-      
+
     </div>
   );
 };

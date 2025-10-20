@@ -136,26 +136,7 @@ const FAQSection = () => {
                     ))}
                 </div>
 
-                {/* Contact CTA */}
-                <div className="text-center mt-12">
-                    <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/50">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                            Still have questions?
-                        </h3>
-                        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                            We're here to help! Get in touch with our team for personalized answers.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
-                                <span className="mr-2">💬</span>
-                                Contact Us
-                            </button>
-                            <button className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-xl font-semibold hover:border-purple-400 hover:text-purple-700 transition-all duration-300">
-                                Schedule a Call
-                            </button>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
             {/* Custom Animation Styles */}

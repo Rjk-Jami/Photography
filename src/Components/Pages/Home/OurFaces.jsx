@@ -12,7 +12,7 @@ const teamMembers = [
     img: "/Team members/Sazzadul Bari.jpg",
     fb: "https://www.facebook.com/sazzadul.bari.79/",
   },
- 
+
   {
     name: "Emin EmRan",
     passion: " Photographer",
@@ -20,7 +20,7 @@ const teamMembers = [
     fb: "https://www.facebook.com/mgkemran/",
   },
 
-   {
+  {
     name: "Rohim Badsha",
     passion: "Cinematographer & Video Editor",
     img: "/Team members/Rohim Badsha.jpg",

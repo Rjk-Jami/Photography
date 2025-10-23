@@ -18,7 +18,7 @@ const Banner = () => {
             // button: "View Portfolio", // ✅ Button will be rendered
         },
         {
-            image: "https://i.ibb.co.com/RG5W973f/man-portrait-with-blue-lights-visual-effects.jpg",
+            image: "https://i.ibb.co.com/mFyXgp5Z/Whats-App-Image-2025-10-23-at-20-22-48-58528de1.jpg",
             title: "Digital Art & Vision",
             text: "Experience stunning visuals and creative perspectives.",
             // button: "Explore Now", // ❌ Button will NOT be rendered

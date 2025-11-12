@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import FoodAndProductBanner from './FoodAndProductBanner';
 
+// JSON data for the Food images
 const foodImagesData = [
+    // Food Images
     { id: 17, category: "Food", image: "/Food/IMG_6298.jpg" },
     { id: 18, category: "Food", image: "/Food/IMG_6464.jpg" },
     { id: 19, category: "Food", image: "/Food/IMG_6435.jpg" },
@@ -16,13 +16,14 @@ const foodImagesData = [
 ];
 
 const FoodAndProduct = () => {
+
     const photoVariants = {
         hidden: { opacity: 0, scale: 0.95 },
         visible: { opacity: 1, scale: 1, transition: { duration: 0.7, ease: "easeOut" } }
     };
 
     return (
-        <div className="bg-white">
+        <div className='bg-white'>
             <FoodAndProductBanner />
 
             <section className="py-16 px-4 md:px-8 max-w-full mx-auto">
@@ -30,7 +31,7 @@ const FoodAndProduct = () => {
                     Appetizing Food Portfolio 🍽️
                 </h2>
 
-                {/* Optimized Responsive Grid */}
+                {/* Responsive Grid for Food Photography */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {foodImagesData.map((photo, index) => (
                         <motion.div
@@ -39,18 +40,21 @@ const FoodAndProduct = () => {
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.3 }}
-                            className="shadow-lg rounded-xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl"
+                            className="shadow-xl rounded-lg overflow-hidden cursor-pointer transition duration-300 transform hover:scale-[1.03] hover:shadow-2xl"
                         >
-                            <LazyLoadImage
+                            <img
                                 src={photo.image}
                                 alt={`${photo.category} photo ${index + 1}`}
-                                effect="blur"
-                                className="w-full h-[350px] object-cover"
+                                // Maintain a clean, consistent look for food/product shots
+                                className="w-full h-full "
                             />
                         </motion.div>
                     ))}
                 </div>
+
+
             </section>
+
         </div>
     );
 };
